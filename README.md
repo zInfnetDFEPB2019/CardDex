@@ -11,3 +11,10 @@ Funcionalidades (épicos)-
 
 * Featured Pokemon (aleatorio random number limitado)
 
+
+===============================================================
+
+1) Instale Node
+
+2) Instale Vue/CLI : npm install -g @vue/cli
+
