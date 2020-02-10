@@ -18,3 +18,7 @@ Funcionalidades (épicos)-
 
 2) Instale Vue/CLI : npm install -g @vue/cli
 
+3) Vá para a pasta pokedex: cd pokedex
+
+4) rode o servidor : npm run serve
+
