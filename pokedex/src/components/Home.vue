@@ -223,4 +223,70 @@ h1{
   background:#27A5F4;
   border-radius: 5px;
 }
+#divBusca{
+  background-color:white;
+  border:solid 1px;
+  border-radius:15px;
+  width:300px;
+  height: 70%;
+display: flex;
+justify-content: space-around;
+
+}
+ 
+#txtBusca{
+  float:left;
+  background-color:transparent;
+  padding-left:5px; 
+  font-size:18px;
+  border:none;
+  height:32px;
+  width:100%;
+
+}
+#btnBusca{
+  border:none;
+  float:left;
+  height:35px;
+  width:100px;
+  font-weight:bold;
+  background:#4BA358;
+}
+.block{
+  display: block;
+  border:none;
+  float:left;
+  height: 450px;
+  width:500px;
+  font-weight:bold;
+  background:#655C5C;
+}
+.bigblock{
+display: block;
+  border:none;
+  float:left;
+  height:490px;
+  width:600px;
+  font-weight:bold;
+  background: #DEDEDE;
+}
+.block2{
+  display: block;
+  border:none;
+  float:left;
+  height: 450px;
+  width:500px;
+  font-weight:bold;
+  background:#655C5C;
+  justify-content: center;
+}
+#butaun{
+  border:none;
+  float:left;
+  height:35px;
+  width:100px;
+  font-weight:bold;
+  background:#27A5F4;
+}
+
 </style>
