@@ -16,15 +16,21 @@
       <div class="column" id="dark"></div>
       <div class="column" id="light">
         <div id="info">
-          <div>
-            <button id="butaun">Buscar</button>
-            <button id="butaun">Buscar</button>
-            <button id="butaun">Buscar</button>
+          <div id="divBtn">
+            <button class="butaun" id="btn">Buscar</button>
+            <button class="butaun" id="btn">Buscar</button>
+            <button class="butaun" id="btn">Buscar</button>
           </div>
           <div class="block"></div>
         </div>
         <div class="bigblock">
           <div class="block2"></div>
+          <div id="visual">
+            <div class="bolinha"></div>
+            <div class="linha1"></div>
+            <div class="linha1"></div>
+            <div class="bolinha"></div>
+          </div>
         </div>
       </div>
       <div class="column" id="dark"></div>
@@ -137,8 +143,8 @@ body {
   width: 100px;
   height: 100px;
   position: absolute;
-  left: 12%;
-  top: 22%;
+  left: 10%;
+  top: 20%;
   margin: -200px 0 0 -200px;
   border-radius: 50%;
   background: -webkit-radial-gradient(65% 15%, circle, white 1px, aqua 3%,
@@ -178,12 +184,16 @@ h1{
   background:#4BA358;
 }
 #info {
-  margin-top: 150px;
-  margin-left: 30px; 
   display: flex;
-  justify-content: space-around;
+}
+#divBtn {
+  margin-top: 105px;
+  margin-left: 30px; 
+  margin-right: 20%;
 }
 .block{
+  margin-top: 150px;
+  margin-left: 30px; 
   display: block;
   border:none;
   height: 300px;
@@ -201,9 +211,26 @@ h1{
   font-weight:bold;
   background: #DEDEDE;
 }
+#visual {
+  display: flex;
+  justify-content: space-around;
+}
+.bolinha {
+  background: red;
+  width: 20px;
+  height: 20px;
+  border: 1px solid;
+  border-radius: 50%;
+  margin-top: 2%;
+}
+.linha1 {
+  background: darkgray;
+  height: 5px;
+  width: 165px;
+  margin-top: 3%;
+
+}
 .block2{
-  display: block;
-  border:none;
   margin-left: 77px;
   margin-top: 30px;
   height: 400px;
@@ -212,10 +239,10 @@ h1{
   background:#655C5C;
   justify-content: center;
 }
-#butaun{
+.butaun{
   border:none;
   display: block;
-  margin-top: 45px;
+  margin-top: 55px;
   height:50px;
   width:130px;
   font-size: 1.6em;
@@ -223,70 +250,4 @@ h1{
   background:#27A5F4;
   border-radius: 5px;
 }
-#divBusca{
-  background-color:white;
-  border:solid 1px;
-  border-radius:15px;
-  width:300px;
-  height: 70%;
-display: flex;
-justify-content: space-around;
-
-}
- 
-#txtBusca{
-  float:left;
-  background-color:transparent;
-  padding-left:5px; 
-  font-size:18px;
-  border:none;
-  height:32px;
-  width:100%;
-
-}
-#btnBusca{
-  border:none;
-  float:left;
-  height:35px;
-  width:100px;
-  font-weight:bold;
-  background:#4BA358;
-}
-.block{
-  display: block;
-  border:none;
-  float:left;
-  height: 450px;
-  width:500px;
-  font-weight:bold;
-  background:#655C5C;
-}
-.bigblock{
-display: block;
-  border:none;
-  float:left;
-  height:490px;
-  width:600px;
-  font-weight:bold;
-  background: #DEDEDE;
-}
-.block2{
-  display: block;
-  border:none;
-  float:left;
-  height: 450px;
-  width:500px;
-  font-weight:bold;
-  background:#655C5C;
-  justify-content: center;
-}
-#butaun{
-  border:none;
-  float:left;
-  height:35px;
-  width:100px;
-  font-weight:bold;
-  background:#27A5F4;
-}
-
 </style>
