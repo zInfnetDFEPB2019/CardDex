@@ -37,6 +37,7 @@ export default {
 html{
   min-height: 100vh;
 }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -47,6 +48,7 @@ html{
 body {
   margin: 0;
   margin-top: 10px;
+  background-color: #de1537;
 }
 
 #ball-wrapper {
@@ -89,7 +91,7 @@ body {
   }
   #btnsubmit {
     height: 40px;
-    background-color: green;
+    background-color: #4ba358;
     border: 0;
   }
   #nav-bar {
