@@ -1,8 +1,17 @@
 <template>
   <div class="home">
-    <header>
-      <div id="ball-wrapper"></div>
-    </header>
+    <div class="wrapper"></div>
+      <ul class="sideMenu">
+        <li class="sideMenuItem"><a href="">Mostrar mais detalhes</a></li>
+        <li class="sideMenuItem"><a href="">Salvar Pokemon</a></li>
+        <li class="sideMenuItem"><a href="">Meu Time</a></li>
+      </ul>
+      <div class="details">
+
+      </div>
+      <div class="information">
+        
+      </div>
   </div>
 </template>
 
@@ -16,24 +25,18 @@ export default {
 </script>
 
 <style >
-
   .home {
-    padding: 10px;
-    position: relative;
+    padding: 0 10px;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
   }
-  #ball-wrapper {
 
-    left: 10%;
-    top: 20%;
-    border-radius: 50%;
-    background: -webkit-radial-gradient(65% 15%, circle, white 1px, aqua 3%,
-    darkblue 60%, aqua 100%);
-    background: -moz-radial-gradient(65% 15%, circle, white 1px, aqua 3%, darkblue
-    60%, aqua 100%);
-    background: -o-radial-gradient(65% 15%, circle, white 1px, aqua 3%, darkblue
-    60%, aqua 100%);
-    background: radial-gradient(circle at 65% 15%, white 1px, aqua 3%, darkblue
-    60%, aqua 100%);
-
+  .home::before, .home::after {
+    content: "";
+    display: block;
+    background-color: rgba(0, 0, 0, .4);
+    width: 2%;
+    height: 100%;
   }
 </style>
