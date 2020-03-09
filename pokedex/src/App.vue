@@ -5,16 +5,7 @@
         <div id="ball"></div>
       </div>
       <div id="sub-menu">
-        <ul id="nav-bar">
-          <li><a href="">File</a></li>
-          <li><a href="">Edit</a></li>
-          <li><a href="">View</a></li>
-          <li><a href="">Help</a></li>
-        </ul>
-        <div id="search-bar">
-          <input type="text" id="inputBusca">
-          <input type="submit" id="btnsubmit" value="Buscar">
-        </div>
+        <h1>CardDex</h1>
       </div>
     </header>
     <Home/>

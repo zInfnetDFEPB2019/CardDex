@@ -1,34 +1,56 @@
 <template>
   <div class="home">
     <div class="wrapper">
-      <ul class="sideMenu">
-        <li class="sideMenuItem"><a href="">Mostrar mais detalhes</a></li>
-        <li class="sideMenuItem"><a href="">Salvar Pokemon</a></li>
-        <li class="sideMenuItem"><a href="">Meu Time</a></li>
-      </ul>
-      <div class="details">
-        <div id="detailsRow1"><p class="detailsText" id="details1"></p><p class="detailsText" id="details2"></p></div>
-        <div id=" detailsRow2"><p class="detailsText" id="details3"></p><p class="detailsText" id="details4"></p></div>
-      </div>
-      <div class="visual">
-        <div class="visual1">
-          <div class="superiorVisualbtn-wrapper">
-            <div class="superiorVisualbtn"></div>
-            <div class="superiorVisualbtn"></div>
-          </div>
-        </div>
-        <div class="visual2"></div>
-        <div class="visual3">
-          <div class="visualBtn-wrapper">
-            <div class="visualBtn"></div>
-          </div>
-          <div class="speakers-wrapper">
-            <div class="speakers"></div>
-            <div class="speakers"></div>
-            <div class="speakers"></div>
+      <div id="search_component">
+          <div class="visual" >
+            <div class="visual1">
+              <div class="superiorVisualbtn-wrapper">
+                <div class="superiorVisualbtn"></div>
+                <div class="superiorVisualbtn"></div>
+              </div>
+            </div>
+            <div class="visual2"></div>
+            <div class="visual3">
+              <div class="visualBtn-wrapper">
+                <div class="visualBtn"></div>
+              </div>
+              <div class="speakers-wrapper">
+                <div class="speakers"></div>
+                <div class="speakers"></div>
+                <div class="speakers"></div>
+              </div>
+
+            </div>
           </div>
           
+        <div class="search_subcomponent">
+          <input type="submit" id="searchBtn" value="Buscar">
+          <input type="text" id="searchField" placeholder="Nome ou número">
         </div>
+        <div class="search_subcomponent">
+          <p id="pokemonDisplayName">Teste</p>
+        </div>
+      </div>
+      <div id="information_and_option">
+        <div id="information_wrapper">
+          <div class="information">
+            <p class="information_title">height</p>
+            <p class="information_value">0.4 m</p>
+          </div>
+          <div class="information">
+            <p class="information_title">Category</p>
+            <p class="information_value">Mouse</p>
+          </div>
+          <div class="information">
+            <p class="information_title">Weight</p>
+            <p class="information_value">6.0 kg</p>
+          </div>
+          <div class="information">
+            <p class="information_title">Ability</p>
+            <p class="information_value">Static</p>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -46,9 +68,10 @@ export default {
 <style >
   .home {
     padding: 0 10px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
   }
 
   .wrapper {
@@ -58,15 +81,41 @@ export default {
     align-items: center;
     position: relative;
     padding: 0 5px;
-  }
-  .home::before, .home::after {
-    content: "";
-    display: block;
-    background-color: rgba(0, 0, 0, .4);
-    width: 2%;
-    height: 100%;
+    flex-direction: column;
   }
 
+  #search_component {
+    width: 100%;
+  }
+
+  .search_subcomponent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  } 
+
+  #searchBtn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    
+  }
+
+  #searchField {
+    height: 50%;
+    border-radius: 5px;
+    padding-left: 10px;
+  }
+
+  #pokemonDisplayName {
+    background: lightgreen;
+    width: 50%;
+    border-radius: 20px;
+    border: 1px solid green;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+  }
   .sideMenu {
     display: flex;
     flex-direction: column;
@@ -101,8 +150,10 @@ export default {
   }
 
   .visual {
-    width: 700px;
-    height: 500px;
+    width: 100%;
+    max-width: 700px;
+    height: 300px;
+    max-height: 500px;
     position: relative;
     display: flex;
     background-color: #dedede;
@@ -110,6 +161,8 @@ export default {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
+    border-radius: 5px;
   }
 
   .visual1 {
@@ -151,8 +204,8 @@ export default {
   }
 
   .visualBtn {
-    height: 36px;
-    width: 36px;
+    height: 33px;
+    width: 33px;
     border-radius: 50%;
     background-image: linear-gradient(top, #c00d0d 0%, #8b0000 80%)
   }
