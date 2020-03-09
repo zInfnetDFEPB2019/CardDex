@@ -1,5 +1,14 @@
 <template>
   <div class="home">
+    <div id="middle_column">
+      <div class="column_type1"></div>
+      <div class="column_type2"></div>
+      <div class="column_type3"></div>
+      <div class="column_type2"></div>
+      <div class="column_type3"></div>
+      <div class="column_type2"></div>
+      <div class="column_type1"></div>
+    </div>
     <div class="wrapper">
       <div id="search_component">
           <div class="visual" >
@@ -31,31 +40,31 @@
           <p id="pokemonDisplayName">Pikachu</p>
         </div>
       </div>
-      <div id="information_and_option">
-        <div id="information_wrapper">
-          <div class="information">
-            <p class="information_title">Height</p>
-            <p class="information_value">0.4 m</p>
+      <div id="info_and_option">
+        <div id="info_wrapper">
+          <div class="info">
+            <p class="info_title">Height</p>
+            <p class="info_value">0.4 m</p>
           </div>
-          <div class="information">
-            <p class="information_title">Category</p>
-            <p class="information_value">Mouse</p>
+          <div class="info">
+            <p class="info_title">Category</p>
+            <p class="info_value">Mouse</p>
           </div>
-          <div class="information">
-            <p class="information_title">Weight</p>
-            <p class="information_value">6.0 kg</p>
+          <div class="info">
+            <p class="info_title">Weight</p>
+            <p class="info_value">6.0 kg</p>
           </div>
-          <div class="information">
-            <p class="information_title">Ability</p>
-            <p class="information_value">Static</p>
+          <div class="info">
+            <p class="info_title">Ability</p>
+            <p class="info_value">Static</p>
           </div>
-          <div class="information">
-            <p class="information_title">Type</p>
-            <p class="information_value">Eletric</p>
+          <div class="info">
+            <p class="info_title">Type</p>
+            <p class="info_value">Eletric</p>
           </div>
-          <div class="information">
-            <p class="information_title">Weakness</p>
-            <p class="information_value">Ground</p>
+          <div class="info">
+            <p class="info_title">Weakness</p>
+            <p class="info_value">Ground</p>
           </div>
         </div>
         <div id="option_wrapper">
@@ -83,6 +92,11 @@ export default {
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    position: relative;
+  }
+
+  #middle_column {
+    display: none;
   }
 
   .wrapper {
@@ -128,11 +142,11 @@ export default {
     text-align: center;
   }
 
-  #information_and_option {
+  #info_and_option {
     width: 100%;
   }
 
-  #information_wrapper {
+  #info_wrapper {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -140,15 +154,15 @@ export default {
     background-color: black;
   }
 
-  .information {
+  .info {
     width: 40%;
   }
 
-  .information_title {
+  .info_title {
     color: chartreuse;
   }
 
-  .information_value {
+  .info_value {
     color: green;
   }
 
@@ -274,5 +288,70 @@ export default {
     width: 25px;
     border-radius: 50%;
     background-image: linear-gradient(top, #c00d0d 0%, #8b0000 80%)
+  }
+
+  @media only screen and (min-width: 1200px) {
+    
+    #middle_column {
+      width: 50px;
+      display: block;
+      height: 100%;
+      background-color: rgba(0,0,0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+    .home {
+      margin-top: 0px;
+    }
+    .wrapper {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .visual{
+      height: 400px;
+    }
+    #search_component {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 46%;
+    }
+
+    .search_subcomponent {
+      width: 100%;
+      max-width: 700px;
+    }
+
+    #searchField {
+      width: 50%;
+      height: 50px;
+      border-radius: 21px;
+    }
+
+    #searchBtn {
+      width: 92px;
+      height: 92px;
+    }
+
+    #pokemonDisplayName {
+      width: 35%;
+    }
+
+    #info_and_option {
+      width: 44%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #info_wrapper{
+      width: 100%;
+    }
+
+    #option_wrapper {
+      width: 100%;
+    }
   }
 </style>
