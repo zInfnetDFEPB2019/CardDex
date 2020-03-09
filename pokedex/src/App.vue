@@ -36,6 +36,10 @@ html{
   text-align: center;
 }
 
+header{
+  padding-top: 5px;
+}
+
 body {
   margin: 0;
   margin-top: 10px;
@@ -113,5 +117,16 @@ body {
     align-items: center;
     background-color: rgba(0, 0, 0, .4);
     padding: 0 10px;
+  }
+
+  @media only screen and (min-width: 1200px){
+    body {
+      background-color: white;
+    }
+    #app {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: #de1537;
+    }
   }
 </style>
