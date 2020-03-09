@@ -28,13 +28,13 @@
           <input type="text" id="searchField" placeholder="Nome ou número">
         </div>
         <div class="search_subcomponent">
-          <p id="pokemonDisplayName">Teste</p>
+          <p id="pokemonDisplayName">Pikachu</p>
         </div>
       </div>
       <div id="information_and_option">
         <div id="information_wrapper">
           <div class="information">
-            <p class="information_title">height</p>
+            <p class="information_title">Height</p>
             <p class="information_value">0.4 m</p>
           </div>
           <div class="information">
@@ -49,8 +49,19 @@
             <p class="information_title">Ability</p>
             <p class="information_value">Static</p>
           </div>
+          <div class="information">
+            <p class="information_title">Type</p>
+            <p class="information_value">Eletric</p>
+          </div>
+          <div class="information">
+            <p class="information_title">Weakness</p>
+            <p class="information_value">Ground</p>
+          </div>
         </div>
-
+        <div id="option_wrapper">
+          <a href="" class="option_button">Salvar Pokemon</a>
+          <a href="" class="option_button">Mostrar Time</a>
+        </div>
       </div>
     </div>
   </div>
@@ -115,6 +126,48 @@ export default {
     height: 50px;
     line-height: 50px;
     text-align: center;
+  }
+
+  #information_and_option {
+    width: 100%;
+  }
+
+  #information_wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: black;
+  }
+
+  .information {
+    width: 40%;
+  }
+
+  .information_title {
+    color: chartreuse;
+  }
+
+  .information_value {
+    color: green;
+  }
+
+  #option_wrapper {
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  .option_button {
+    text-decoration: none;
+    color: white;
+    background-color: steelblue;
+    width: 40%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+
   }
   .sideMenu {
     display: flex;
