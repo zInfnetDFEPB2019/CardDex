@@ -94,7 +94,6 @@ export default {
 
 
 <style>
-
   * {
     box-sizing: border-box;
   }
@@ -226,7 +225,7 @@ export default {
     margin-top: 40px;
   }
   #ball-wrapper {
-    position: relative;
+    position: relative; 
     padding-left: 10px;
     padding-bottom: 10px;
   }
