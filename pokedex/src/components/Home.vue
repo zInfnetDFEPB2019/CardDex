@@ -44,27 +44,19 @@
         <div id="info_wrapper">
           <div class="info">
             <p class="info_title">Height</p>
-            <p class="info_value">0.4 m</p>
-          </div>
-          <div class="info">
-            <p class="info_title">Category</p>
-            <p class="info_value">Mouse</p>
+            <p class="info_value">--</p>
           </div>
           <div class="info">
             <p class="info_title">Weight</p>
-            <p class="info_value">6.0 kg</p>
+            <p class="info_value">--</p>
           </div>
           <div class="info">
             <p class="info_title">Ability</p>
-            <p class="info_value">Static</p>
+            <p class="info_value">--</p>
           </div>
           <div class="info">
             <p class="info_title">Type</p>
-            <p class="info_value">Eletric</p>
-          </div>
-          <div class="info">
-            <p class="info_title">Weakness</p>
-            <p class="info_value">Ground</p>
+            <p class="info_value">--</p>
           </div>
         </div>
         <div id="option_wrapper">
@@ -79,8 +71,28 @@
 <script>
 export default {
   name: 'home',
+  created() {
+    this.$store.dispatch('CALL_POKEMON')
+  },
   props: {
     msg: String
+  },
+  computed: {
+    height() {
+      return this.$store.getters.height
+    },
+    weight() {
+      return this.$store.getters.weight
+    },
+    abilities() {
+      return this.$store.getters.abilities
+    },
+    type() {
+      return this.$store.getters.type
+    },
+    name() {
+      return this.$store.getters.name
+    }
   }
 }
 </script>
