@@ -1,8 +1,9 @@
 <template>
   <div class="pokemon-list">
     <h2>Choose your Pokémon</h2>
+    <input typy="text" v-model="search" placeholder="search pokemon"/>
     <p
-      v-for="(pokemon, index) in pokemonList"
+      v-for="(pokemon, index) in filteredPokemons"
       :key="pokemon.url"
       class="pokemon-list-item"
     >
@@ -44,6 +45,11 @@
 <script>
 export default {
     name: 'PokemonList',
+    data(){
+      return{
+        search: ''
+      }
+    },
     props: {
         pokemonList: {
             type: Array,
@@ -58,6 +64,11 @@ export default {
         favoriteListLength() {
             return this.favorites.length
         },
+        filteredPokemons(){
+          return this.pokemonList.filter((pokemon) => {
+            return pokemon.name.match(this.search);
+          });
+        }
     },
     methods: {
         setFavorites(name) {
