@@ -2,6 +2,9 @@
   <div
     v-if="pokemonData && pokemonDescription"
     class="pokemon-card nes-container is-rounded"
+
+    :class="[ isFavorite ? 'favorito' : 'nao-favorito']"
+    @click="toggleClass"
   >
     <div class="pokemon-card__image">
       <img
@@ -22,6 +25,9 @@
       </p>
       <p>{{ pokemonDescription[0].flavor_text }}</p>
     </div>
+    <a 
+      class="nes-btn"
+    >Principal</a>
   </div>
 </template>
 
@@ -32,12 +38,13 @@
         pokemonName: {
           type: String,
           default: ''
-        }
+        },
       },
       data: function () {
         return {
           pokemonData: null,
-          pokemonDescription: null
+          pokemonDescription: null,
+          isFavorite: false,
         }
       },
       async created () {
@@ -58,6 +65,9 @@
           return json.flavor_text_entries.filter(function(element) {
             return element.language.name === 'en'
           })
+        },
+        toggleClass: function(){
+          this.isFavorite = !this.isFavorite
         }
       }
         
@@ -70,5 +80,13 @@
   align-items: center;
   justify-content: space-around;
   margin: 10px;
+}
+
+.favorito {
+  background:#5496ff;
+}
+
+.nao-favorito { 
+  background: white;
 }
 </style>

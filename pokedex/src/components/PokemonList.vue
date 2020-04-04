@@ -17,24 +17,24 @@
         class="nes-icon is-small heart is-empty"
       />
       {{ pokemon.name }}
-      <img
+      <!-- <img
         :key="pokemon.url"
         :src="
           `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index +
             1}.png`
         "
         alt="Pokemon`"
-      >
+      > -->
       <a
         v-show="!favorites.includes(pokemon.name)"
         class="nes-btn"
         :class="{ 'is-disabled': favoriteListLength === 10 }"
-        @click="setFavorites(pokemon.name), playPokemonCry(index + 1)"
+        @click="setFavorites(pokemon.name)"
       >Pick me!</a>
       <button
         v-show="favorites.includes(pokemon.name)"
         class="nes-btn is-error"
-        @click="setFavorites(pokemon.name), playPokemonCry(index + 1)"
+        @click="setFavorites(pokemon.name)"
       >
         Remove
       </button>
@@ -66,6 +66,7 @@ export default {
         },
         filteredPokemons(){
           return this.pokemonList.filter((pokemon) => {
+            console.log("NOIX" + pokemon)
             return pokemon.name.match(this.search);
           });
         }
