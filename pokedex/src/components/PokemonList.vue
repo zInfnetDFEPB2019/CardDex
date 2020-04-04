@@ -66,7 +66,6 @@ export default {
         },
         filteredPokemons(){
           return this.pokemonList.filter((pokemon) => {
-            console.log("NOIX" + pokemon)
             return pokemon.name.match(this.search);
           });
         }
@@ -100,5 +99,7 @@ export default {
 .pokemon-list-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 </style>
