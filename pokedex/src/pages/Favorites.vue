@@ -1,13 +1,13 @@
 <template>
   <div>
     <h1 class="overview-favorite-pokemon__title">
-      Your favorite Pokémon
+      Seus Pokémons escolidos
     </h1>
     <router-link
       class="nes-btn"
       to="/"
     >
-      Go back
+      Voltar
     </router-link>
     <div class="overview-favorite-pokemon" >
         <pokemon-card 

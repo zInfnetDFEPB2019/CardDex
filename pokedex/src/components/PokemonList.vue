@@ -1,7 +1,7 @@
 <template>
   <div class="pokemon-list">
-    <h2>Choose your Pokémon</h2>
-    <input typy="text" v-model="search" placeholder="search pokemon"/>
+    <h2>Escolha seus Pokémons</h2>
+    <input typy="text" v-model="search" placeholder="digite um Pokémon"/>
     <p
       v-for="(pokemon, index) in filteredPokemons"
       :key="pokemon.url"
@@ -30,13 +30,13 @@
         class="nes-btn"
         :class="{ 'is-disabled': favoriteListLength === 10 }"
         @click="setFavorites(pokemon.name)"
-      >Pick me!</a>
+      >Escolher!</a>
       <button
         v-show="favorites.includes(pokemon.name)"
         class="nes-btn is-error"
         @click="setFavorites(pokemon.name)"
       >
-        Remove
+        Remover
       </button>
     </p>
   </div>

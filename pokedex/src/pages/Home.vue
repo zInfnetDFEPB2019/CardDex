@@ -19,13 +19,15 @@
           </div>
           <div class="col-xs-12 col-sm-6" >
             <div class="box" >
-              <div class="card" style="width: 18rem; border: none;">
-                <pokemon-list
-                  :pokemon-list="statePokemonDataList"
-                  :favorites="stateFavoritePokemonList"
-                  @deleteFavorite="deleteFavorite"
-                  @addFavorite="addFavorite"
-                />
+              <div class="scrolltable">
+                <div class="card" style="width: 18rem; border: none;">
+                  <pokemon-list
+                    :pokemon-list="statePokemonDataList"
+                    :favorites="stateFavoritePokemonList"
+                    @deleteFavorite="deleteFavorite"
+                    @addFavorite="addFavorite"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -85,7 +87,10 @@ export default {
   color: rgb(0, 0, 0);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
-
+.scrolltable{
+  height: 653px;
+  overflow: scroll;
+}
 .myteam {
   font-weight: bold;
   padding-top: 30px;

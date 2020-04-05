@@ -13,10 +13,10 @@
       >
     </div>
     <div class="pokemon-card__text">
-      <p>Name: {{ pokemonData.name }}</p>
+      <p>Nome: {{ pokemonData.name }}</p>
       <p>No. {{ pokemonData.id }}</p>
       <p>
-        Type: <span
+        Tipo: <span
           v-for="(typesOfPokemon, index) in pokemonData.types"
           :key="`type${index}`"
         >
@@ -27,7 +27,7 @@
     </div>
     <a 
       class="nes-btn"
-    >Principal</a>
+    >Favoritar</a>
   </div>
 </template>
 

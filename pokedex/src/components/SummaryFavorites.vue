@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h2>Your chosen favorite Pokémon</h2>
+    <h2>Seus Pokémons escolhidos</h2>
     <p v-if="favoriteListLength < maximumList">
-      I can't choose, help me <button
+      Ficou na dúvida? Deixe a sorte escolher para você! <button
         class="nes-btn is-success"
         @click="startInterval"
       >
-        Pick Pokémon
+        Pegar Pokémons!
       </button>
     </p>
     <template>
@@ -23,25 +23,25 @@
       </p>
     </template>
     <p v-if="favoriteListLength > 1 && favoriteListLength < maximumList">
-      You can add {{ maximumList - favoriteListLength }} more Pokémon
+      Ainda é possível adicionar mais {{ maximumList - favoriteListLength }} Pokémons
     </p>
     <p v-if="favoriteListLength > 9">
-      Your list is full!
+      Seu time está cheio!
     </p>
     <p v-if="favoriteListLength > 9">
-      Do you want to <button
+      Você deseja <button
         class="nes-btn is-error"
         @click="emptyFavoritePokemonList"
       >
-        Delete
-      </button> the list?
+        Deletar
+      </button> seu time?
     </p>
     <router-link
       v-if="favoriteListLength > 0"
       class="nes-btn"
       to="/favorites"
     >
-      View your favorite Pokémon
+      Veja seu time clicando aqui!
     </router-link>
   </div>
 </template>
