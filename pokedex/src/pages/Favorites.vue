@@ -41,4 +41,11 @@
   margin-top: 10px;
   text-align: center;
 }
+
+@media screen and (max-width: 767px) {
+  .overview-favorite-pokemon {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+}
 </style>
