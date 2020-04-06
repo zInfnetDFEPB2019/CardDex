@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="overview-favorite-pokemon__title">
-      Seus Pokémons escolidos
+      Seus Pokémons escolhidos
     </h1>
     <router-link
       class="nes-btn"

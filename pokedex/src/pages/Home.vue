@@ -1,7 +1,7 @@
 <template>
   <div class="select-pokemon-page">
     <img src="./../assets/logo-pixel.gif" alt="pokémon" />
-    <h1>Home page</h1>
+    
     <div>
       <div class="container">
         <div class="row">
@@ -94,5 +94,11 @@ export default {
 .myteam {
   font-weight: bold;
   padding-top: 30px;
+}
+
+@media screen and (max-width: 767px){
+  img {
+    max-width: 300px;
+  }
 }
 </style>
